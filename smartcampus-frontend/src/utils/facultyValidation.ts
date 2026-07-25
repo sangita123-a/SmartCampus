@@ -14,7 +14,7 @@ export const facultyFormSchema = z.object({
   dateOfBirth: z.string().optional(),
   qualification: z.string().optional(),
   experience: z
-    .number({ error: 'Experience is required' })
+    .number({ invalid_type_error: 'Experience is required', required_error: 'Experience is required' })
     .int('Experience must be a whole number')
     .min(0)
     .max(60),

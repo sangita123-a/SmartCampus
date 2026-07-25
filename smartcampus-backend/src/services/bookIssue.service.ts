@@ -4,8 +4,10 @@ import { AppError } from '../utils/AppError';
 
 export class BookIssueService {
   async listIssues(collegeId: string | null, query: any) {
-    const { page = 1, limit = 10, search, status, studentId, facultyId } = query;
-    const skip = (page - 1) * limit;
+    const pageNum = Math.max(1, Number(query.page) || 1);
+    const limitNum = Math.max(1, Number(query.limit) || 10);
+    const { search, status, studentId, facultyId } = query;
+    const skip = (pageNum - 1) * limitNum;
 
     const where = {
       ...(collegeId ? { book: { collegeId } } : {}),
@@ -28,7 +30,7 @@ export class BookIssueService {
       prisma.bookIssue.findMany({
         where,
         skip,
-        take: limit,
+        take: limitNum,
         orderBy: { issueDate: 'desc' },
         include: {
           book: { select: { id: true, title: true, isbn: true, coverImage: true } },

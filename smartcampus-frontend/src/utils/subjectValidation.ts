@@ -4,7 +4,7 @@ export const subjectFormSchema = z.object({
   subjectName: z.string().trim().min(2, 'Subject name is required').max(150),
   shortName: z.string().optional(),
   credits: z
-    .number({ error: 'Credits are required' })
+    .number({ invalid_type_error: 'Credits are required', required_error: 'Credits are required' })
     .int()
     .min(1, 'Credits must be at least 1')
     .max(30),

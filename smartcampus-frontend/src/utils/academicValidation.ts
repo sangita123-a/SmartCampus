@@ -70,7 +70,7 @@ export const courseFormSchema = z.object({
 
   duration: z
 
-    .number({ error: 'Duration is required' })
+    .number({ invalid_type_error: 'Duration is required', required_error: 'Duration is required' })
 
     .int('Duration must be a whole number')
 
@@ -112,7 +112,7 @@ export const semesterFormSchema = z
 
     semesterNumber: z
 
-      .number({ error: 'Semester number is required' })
+      .number({ invalid_type_error: 'Semester number is required', required_error: 'Semester number is required' })
 
       .int('Semester number must be a whole number')
 
