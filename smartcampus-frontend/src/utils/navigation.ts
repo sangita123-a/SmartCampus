@@ -41,6 +41,11 @@ export function getSidebarNav(role: Role): NavItem[] {
       return [
         overview('/dashboard/super-admin'),
         {
+          href: '/dashboard/modules',
+          label: 'ERP Modules',
+          icon: Layers,
+        },
+        {
           href: '/dashboard/super-admin/colleges',
           label: 'Colleges',
           icon: Building2,
@@ -89,6 +94,11 @@ export function getSidebarNav(role: Role): NavItem[] {
     case Role.COLLEGE_ADMIN:
       return [
         overview('/dashboard/college-admin'),
+        {
+          href: '/dashboard/modules',
+          label: 'ERP Modules',
+          icon: Layers,
+        },
         {
           href: '/dashboard/college-admin/departments',
           label: 'Departments',
