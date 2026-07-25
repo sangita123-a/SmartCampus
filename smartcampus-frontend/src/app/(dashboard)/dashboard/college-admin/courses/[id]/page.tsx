@@ -8,6 +8,8 @@ import { Role } from '@/types/roles';
 
 
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
 
   title: 'Course Details',

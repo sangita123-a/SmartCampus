@@ -15,6 +15,8 @@ const sans = Source_Sans_3({
   display: 'swap',
 });
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: {
     default: 'SmartCampus',

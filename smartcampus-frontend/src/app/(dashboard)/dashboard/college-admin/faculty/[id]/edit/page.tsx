@@ -3,6 +3,8 @@ import { DashboardLayoutShell } from '@/layouts/DashboardLayout';
 import { EditFacultyPage } from '@/components/faculty/EditFacultyPage';
 import { Role } from '@/types/roles';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
   title: 'Edit Faculty',
 };
