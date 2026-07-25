@@ -5,3 +5,5 @@ pages_build_output_dir = ".vercel/output/static"
 
 [vars]
 NEXT_PUBLIC_API_URL = "http://localhost:5000/api/v1"
+
+# Trigger Cloudflare Pages production deployment
